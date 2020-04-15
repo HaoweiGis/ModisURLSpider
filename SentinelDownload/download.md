@@ -1,0 +1,1 @@
+`screen -L sentinelsat -u ** -p ** -g map.geojson --sentinel 2 -s 20200331 -e 20200415 --cloud 50 -d`
