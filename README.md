@@ -14,5 +14,6 @@ python MCDSpider.py MCD12Q1,2006-2016,h26v05-h26v04-h27v04-h27v05
 ## Sentinel 数据下载
 https://pypi.org/project/sentinelsat/
 可以下载哨兵1,2,3，速度十分快，命令行操作十分简单，容易上手<br />
-https://github.com/aboulch/medusa_tb
-可以下载和对zip文件裁剪，十分好用
+可以下载和对zip文件裁剪，十分好用 https://github.com/aboulch/medusa_tb<br />
+
+sen2cor 相关工具 https://sen2mosaic.readthedocs.io/en/latest/setup.html
