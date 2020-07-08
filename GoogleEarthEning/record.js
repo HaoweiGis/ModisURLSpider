@@ -64,3 +64,16 @@ var ExportImage = function(RESIImg,id,name){
   
   ExportImage(RESIImg,1,'H1RESIImage1')
 
+// 将ImageCollection循环显示加载
+var Imgs = Sentinel2A.filterBounds(bounds_xian)
+.filterDate('2019-06-01','2019-10-01')
+.filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',5))
+print(Imgs)
+var ImgList = Imgs.toList(Imgs.size())
+
+for (var i = 0; i < Imgs.size().getInfo(); i++) {
+  var image = ee.Image(ImgList.get(i))
+  var imageID = image.get('PRODUCT_ID').getInfo()
+  var visParams = {bands: 'B4,B3,B2', min: 97.36329499846, max: 2562.3, gamma: 1.5}
+  Map.addLayer(image, visParams,imageID)
+}
